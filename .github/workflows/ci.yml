@@ -24,4 +24,4 @@ jobs:
 
       - name: Test build
         run: npm start &
-        continue-on-error: true
+        continue-on-error: true
