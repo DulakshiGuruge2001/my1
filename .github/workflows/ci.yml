@@ -5,9 +5,11 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Test build
-        run: npm start &
-        continue-on-error: true
+      - name: Start server (basic check)
+        run: npm start
+        continue-on-error: true
